@@ -14,6 +14,15 @@ from torch.autograd import Variable
 import numpy as np
 
 
+#
+# Settings.
+#
+
+import ptvsd
+ptvsd.enable_attach('pytorch',address=('0.0.0.0',5022))
+ptvsd.wait_for_attach()
+ptvsd.break_into_debugger()
+
 # Parameters taken from https://arxiv.org/abs/1803.04831
 TIME_STEPS = 100
 NUM_UNITS = 128
